@@ -10,9 +10,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import Autoplay from "embla-carousel-autoplay";
 import { Badge } from "@/components/ui/badge";
-import { quantum } from "ldrs";
-
-quantum.register();
+import Spinner from "../components/Loader";
 
 interface Motivacion {
   _id: string;
@@ -45,7 +43,7 @@ export default function Home() {
       {isLoading ? (
         <>
           <h1 className="text-3xl text-white font-mono text-center">Buscando mis motivaciones</h1>
-          <l-quantum size="45" speed="1.75" color="white"></l-quantum>
+          <Spinner />
         </>
       ) : (
         <>
