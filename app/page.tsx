@@ -8,7 +8,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import Autoplay from "embla-carousel-autoplay";
+// import Autoplay from "embla-carousel-autoplay";
 import { Badge } from "@/components/ui/badge";
 import Spinner from "../components/Loader";
 
@@ -53,9 +53,8 @@ export default function Home() {
             opts={{
               align: "start",
               loop: true,
-              containScroll: false,
             }}
-            plugins={[Autoplay({ delay: 5000 })]}
+            // plugins={[Autoplay({ delay: 3000, stopOnMouseEnter: true, stopOnInteraction: false })]}
           >
             <CarouselContent className="-ml-2 md:-ml-4">
               {motivaciones.map((motivacion) => (
